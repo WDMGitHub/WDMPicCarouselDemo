@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="DMPicCarouselView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EGs-Nf-uZI">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                    <subviews>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YvF-ot-TEp">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                        </imageView>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jZo-YT-KHD">
+                            <rect key="frame" x="320" y="0.0" width="320" height="160"/>
+                        </imageView>
+                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DSQ-EK-zYS">
+                            <rect key="frame" x="640" y="0.0" width="320" height="160"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="DSQ-EK-zYS" firstAttribute="leading" secondItem="jZo-YT-KHD" secondAttribute="trailing" id="6Rg-wE-fnL"/>
+                        <constraint firstItem="jZo-YT-KHD" firstAttribute="height" secondItem="EGs-Nf-uZI" secondAttribute="height" id="7DB-Oq-hjg"/>
+                        <constraint firstAttribute="bottom" secondItem="YvF-ot-TEp" secondAttribute="bottom" id="8SR-8f-Afo"/>
+                        <constraint firstItem="DSQ-EK-zYS" firstAttribute="centerY" secondItem="jZo-YT-KHD" secondAttribute="centerY" id="AoV-La-MKo"/>
+                        <constraint firstItem="YvF-ot-TEp" firstAttribute="height" secondItem="EGs-Nf-uZI" secondAttribute="height" id="EBJ-6T-mVf"/>
+                        <constraint firstAttribute="trailing" secondItem="DSQ-EK-zYS" secondAttribute="trailing" id="Hab-CC-2Ob"/>
+                        <constraint firstItem="DSQ-EK-zYS" firstAttribute="leading" secondItem="jZo-YT-KHD" secondAttribute="trailing" id="J80-dC-rle"/>
+                        <constraint firstItem="jZo-YT-KHD" firstAttribute="width" secondItem="EGs-Nf-uZI" secondAttribute="width" id="LxF-Bn-THo"/>
+                        <constraint firstItem="DSQ-EK-zYS" firstAttribute="width" secondItem="EGs-Nf-uZI" secondAttribute="width" id="OZR-hb-qe7"/>
+                        <constraint firstItem="jZo-YT-KHD" firstAttribute="leading" secondItem="YvF-ot-TEp" secondAttribute="trailing" id="W8Q-KM-MC8"/>
+                        <constraint firstItem="YvF-ot-TEp" firstAttribute="centerY" secondItem="jZo-YT-KHD" secondAttribute="centerY" id="X5F-ef-TIL"/>
+                        <constraint firstItem="YvF-ot-TEp" firstAttribute="width" secondItem="EGs-Nf-uZI" secondAttribute="width" id="cqO-Kc-e1V"/>
+                        <constraint firstItem="YvF-ot-TEp" firstAttribute="leading" secondItem="EGs-Nf-uZI" secondAttribute="leading" id="dK9-yW-hel"/>
+                        <constraint firstItem="YvF-ot-TEp" firstAttribute="top" secondItem="EGs-Nf-uZI" secondAttribute="top" id="fX9-3L-wNF"/>
+                        <constraint firstItem="jZo-YT-KHD" firstAttribute="leading" secondItem="YvF-ot-TEp" secondAttribute="trailing" id="ssi-Eo-tVE"/>
+                        <constraint firstItem="DSQ-EK-zYS" firstAttribute="height" secondItem="EGs-Nf-uZI" secondAttribute="height" id="tub-PT-hPs"/>
+                    </constraints>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="QSq-5x-wjU">
+                    <rect key="frame" x="0.0" y="123" width="320" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="vh9-qq-c45"/>
+                    </constraints>
+                    <color key="currentPageIndicatorTintColor" red="0.085911283559999996" green="0.80227558720000003" blue="0.67641044459999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <action selector="pageControlValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="YH9-px-LeT"/>
+                    </connections>
+                </pageControl>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EGs-Nf-uZI" secondAttribute="bottom" id="155-0R-i1B"/>
+                <constraint firstAttribute="trailing" secondItem="EGs-Nf-uZI" secondAttribute="trailing" id="Brm-HW-8PD"/>
+                <constraint firstItem="EGs-Nf-uZI" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GOW-7P-uIf"/>
+                <constraint firstItem="EGs-Nf-uZI" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="Lr7-Z2-WgH"/>
+                <constraint firstItem="EGs-Nf-uZI" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="QT9-Rf-UWj"/>
+                <constraint firstAttribute="trailing" secondItem="QSq-5x-wjU" secondAttribute="trailing" id="w0W-VU-leD"/>
+                <constraint firstItem="EGs-Nf-uZI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wth-Pw-I5a"/>
+                <constraint firstItem="QSq-5x-wjU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="xgD-yr-ZSR"/>
+                <constraint firstAttribute="bottom" secondItem="QSq-5x-wjU" secondAttribute="bottom" id="y36-iV-Ll9"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="currentImgView" destination="jZo-YT-KHD" id="Tgd-M9-MlO"/>
+                <outlet property="nextImgView" destination="DSQ-EK-zYS" id="rLh-kM-8us"/>
+                <outlet property="pageControl" destination="QSq-5x-wjU" id="6vN-Jy-zGL"/>
+                <outlet property="preImgView" destination="YvF-ot-TEp" id="abH-Ce-oBx"/>
+                <outlet property="scrollView" destination="EGs-Nf-uZI" id="YLd-NE-Nnf"/>
+            </connections>
+            <point key="canvasLocation" x="432" y="235"/>
+        </view>
+    </objects>
+</document>
