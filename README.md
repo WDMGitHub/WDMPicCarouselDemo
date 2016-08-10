@@ -1,2 +1,3 @@
-# mySeventhRepository
-DMPicCarouselDemo
+# DMPicCarouselDemo
+
+
